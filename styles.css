@@ -62,6 +62,12 @@ p1 {
   color: #000000;
 }
 
+p2 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  color: #000000;
+}
+
 button {
   background-color: #195fbb;
   border: none;
