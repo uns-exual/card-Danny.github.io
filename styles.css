@@ -1,39 +1,54 @@
 .card {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .card img {
-  width: 50;
-  height: 50;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  transition: transform 0.5s ease;
-  transform: translateY(100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transition: transform 0.5s ease;
+    transform: translateY(100%);
 }
 
-.card:hover .card-info {
-  transform: translateY(0);
+.card.open .card-info {
+    transform: translateY(-100%);
 }
 
-.img {
-  max-width: 10%;
-  height: auto;
+.card-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
 }
 
-h2 {
-  font-family: Arial, Helvetica, sans-serif;
+.card.open .card-details {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
